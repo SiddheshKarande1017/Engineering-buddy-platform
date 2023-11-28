@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForLife</title>
+    <style>
+       *{
+    margin: 0px;
+}
+.mynav{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-image: url('https://img.freepik.com/premium-photo/warm-orange-…ement-faint-texture-marble-gradient_28629-604.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: antiquewhite;
+    /* position: fixed; */
+    height:40px;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+
+}
+#log_outb
+{
+    float: right;
+    align-items: flex-end;
+}
+body{
+    
+   
+   /* background-image: url('https://img.freepik.com/premium-photo/warm-orange-…ement-faint-texture-marble-gradient_28629-604.jpg');
+   background-repeat: no-repeat;
+   background-size: cover; */
+   background-color: white;
+   border: violet;
+}
+#id{
+    height: 30px;
+    margin-top: 0px;
+    margin: -10;
+    width: 100%;
+
+}
+.dropdown-check-list {
+        display: inline-block;
+        position: relative;
+        border: 2px solid orange;
+        padding: 10px;
+        width: 100%;
+        margin-top: 50px;
+
+    }
+.dropdown-check-list .anchor,
+    .type,
+    .price {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 50px 5px 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.login-container:hover{
+    background-color: rgb(231, 136, 12);
+    color: white;
+
+}
+.login-container{
+    background-color: antiquewhite;
+    border: 1px orange;
+    /*margin-left: 960px;*/
+    /*padding: 12px 15px;*/
+    /*cursor: pointer;*/
+    /*border-color: antiquewhite;*/
+    /*border-radius: 10px*/
+    align-items: end;
+    float: right;
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+
+}
+li a:hover {
+    background-color: orange;
+    color: white;
+}
+li a:active{
+    background-color: violet;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+
+}
+table, th, td {
+    border: 1px solid rgb(254, 231, 188);
+    border: 1px solid rgb(254, 231, 188);
+    border-collapse: collapse;
+    /* background-color: rgb(248, 105, 248); */
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+table{
+    width: 60%;
+    height: 80%;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(254, 231, 188);
+    /* background-image: url('https://img.freepik.com/premium-photo/warm-orange-…ement-faint-texture-marble-gradient_28629-604.jpg'); */
+    border: violet;
+    z-index: 1;
+    margin-bottom: 60px;
+}
+th{
+    background-color: white;
+}
+.lnk{
+    width: 130px;
+    padding: 5px;
+
+}
+.lnk button{
+    background-color: white;
+}
+tr{
+    height : 35px;
+}
+tr:nth-child(even){
+    background-color: rgb(251, 249, 244);
+}
+th, td, tr {
+    font-size: large;
+}
+tr:hover{
+    background-color: antiquewhite;
+}
+.problem-heading{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+    /* background-image: url('https://img.freepik.com/premium-photo/warm-orange-…ement-faint-texture-marble-gradient_28629-604.jpg'); */
+    margin-left: 35%;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.btn-btn-outline-btn-info{
+    color: white;
+    background-color: rgb(237, 204, 144);
+    border:none;
+    border-radius:10px;
+    padding:5px;
+    margin-top:3px;
+    margin-bottom:2px;
+}
+.btn-btn-outline-btn-sub
+{
+    background-color: rgb(255, 218, 148);
+    border-radius: 10px;
+    border-color: brown;
+    padding:10px;
+    margin-top:13px;
+    margin-bottom:2px;
+    cursor: pointer;
+}
+.btn-btn-outline-btn-sub:hover
+{
+    background-color: rgb(255, 218, 148);
+    color: white;
+    border-radius: 10px;
+    border-color: brown;
+    padding:10px;
+    margin-top:13px;
+    margin-bottom:2px;
+    cursor: pointer;
+}
+.sohail{
+    background-color: rgb(255, 218, 148);
+    border-radius: 20px;
+    border-color: brown;
+    margin-top: 30px;
+
+}
+.container-heading{
+    color: black;
+    padding: 10px 10px 5px 5px;
+    box-shadow: rgb(239, 189, 189) 2px 2px;
+    background-color: rgb(247, 247, 221)    ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    align-items: center;
+    margin-left: 36%;
+
+}
+.wrap-body-container{
+    
+}
+#question-id{
+    max-width: 30px;
+}
+    </style>
+
+</head>
+<body>
+     <div class="wrap-body-container" style="opacity: 1;">
+        <div class = "mynav" id="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'discuss' %}">Discuss</a></li>
+                <li><a href="{% url 'upload_doc' %}">Upload doc</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li>
+                <li><a href="{% url 'topics' %}">Topic</a></li>
+                <li><a href="{% url 'problems' %}">Problems</a></li>
+                <li><button class="login-container"><a href="{% url 'logout' %}">logout</a></button></li>
+    
+    
+            </ul>
+        </div>
+    
+        <div class="problems">
+            <div class="problem-heading">
+                <h1 class="container-heading">RESUME LIST</h1>
+    <!--            <button class="sohail"><a href="{% url 'AddProblem' %}">Add Questions</a></button>-->
+            </div>
+    
+    <!--        <table class="table table-hover table-dark">-->
+    <!--            <thead>-->
+    <!--                <tr>-->
+    
+    <!--                    <th scope="col" id="question-id">Question ID</th>-->
+    <!--                    <th scope="col">Topic</th>-->
+    <!--                    <th scope="col">Question Name</th>-->
+    <!--                    <th scope="col" class="lnk">Link</th>-->
+    <!--                </tr>-->
+    <!--            </thead>-->
+    <!--            <tbody>-->
+    
+    <!--                {% for n in mydata %}-->
+    <!--                    <tr>-->
+    <!--                        <td>{{ n.q_id }}</td>-->
+    <!--                        <td>{{ n.topic }}</td>-->
+    <!--                        <td>{{ n.q_name}}</td>-->
+    <!--                        <td>-->
+    <!--                            <button class="btn-btn-outline-btn-info"><a href="{{n.link}}">Visit Question</a></button>-->
+    
+    <!--                        </td>-->
+    <!--                    </tr>-->
+    <!--                {% endfor %}-->
+    <!--            </tbody>-->
+    <!--        </table>-->
+            <div>
+        <table class="table table-hover table-dark">
+            <thead>
+            <tr>
+                <th scope="col" id="question-id">Query ID</th>
+    
+                <th scope="col">Index</th>
+                <th scope="col">Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for result in result_data %}
+            <tr>
+    
+                <td>{{ result.doc_id }}</td>
+                <td>{{ result.index }}</td>
+                <td>{{ result.score }}</td>
+            </tr>
+            {% endfor %}
+             </tbody>
+        </table>
+        </div>
+        <div class ="footer">
+            <ul>
+                <li><a href="#">Connect</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+    
+    
+            </ul>
+        </div>
+     </div>
+</body>
+</html>

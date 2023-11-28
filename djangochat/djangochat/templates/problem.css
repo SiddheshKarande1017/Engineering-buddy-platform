@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+}
+#id{
+    background-color: black;
+    height: 30px;
+    margin-top: 0px;
+    margin: -10;
+}
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+}
+.login-container:hover{
+    background-color: white;
+    color: black;
+} 
+.login-container{
+    margin-left: 1200px;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+
+}
+li a:hover {
+    background-color: white;
+    color: black;
+}
+li a:active{
+    background-color: white;
+    color: black;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    background-color: black;
+    align-items: center;
+
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

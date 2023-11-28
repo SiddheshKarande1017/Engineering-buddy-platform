@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForLife</title>
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> {% endcomment %}
+
+    <style>
+      {% comment %} @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); {% endcomment %}
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .intro h1 {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+    
+    .intro button {
+      background-color:  antiquewhite;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+    *{
+    margin: 0px;
+     }
+    .mynav{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+#id{
+    height: 30px;
+    margin-top: 0px;
+    margin: -10;
+    width: 100%;
+
+}
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+
+}
+.login-container:hover{
+    background-color: rgb(231, 136, 12);
+    color: white;
+
+}
+.login-container{
+    background-color: antiquewhite;
+    /*margin-left: 960px;*/
+    /*padding: 12px 15px;*/
+    /*cursor: pointer;*/
+    /*border-color: antiquewhite;*/
+    /*border-radius: 10px*/
+    align-items: end;
+    float: right;
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+
+}
+li a:hover {
+    background-color: rgb(231, 136, 12);
+    color: white;
+}
+li a:active{
+    background-color: rgb(225, 133, 13);
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+
+}
+.website-name-div{
+    width: 100%;
+    text-align: center;
+
+}
+.website-name{
+    justify-content: center;
+    padding: 40px;
+    font-size: 2cm;
+}
+.website-content{
+    justify-content: center;
+    padding: 5px;
+}
+.actual-content{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 19.5cm;
+
+}
+.footer{
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+    margin-left: 35%;
+    position: fixed;
+    bottom: 0;
+}
+* {box-sizing: border-box;}
+body {font-family: Georgia, 'Times New Roman', Times, serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.active {
+  background-color: #717171;
+}
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.flex-container > div {
+  background-color: #FFE9B1;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.about-me {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-top: 2px solid #eeeeee;
+}
+
+.about-me img {
+  width: 250px;
+  max-width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+{% comment %} .about-me-text h2 {
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+} {% endcomment %}
+
+.about-me-text p {
+  font-size: 20px;
+  margin: 15px 0;
+} 
+
+
+    </style>
+
+</head>
+
+<body>
+
+ 
+
+    <div class = "mynav" id="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'discuss' %}">Discuss</a></li>
+            <li><a href="{% url 'upload_doc' %}">Upload doc</a></li>
+            <li><a href="{% url 'resume' %}">Resume</a></li>
+            <li><a href="{% url 'topics' %}">Topic</a></li>
+            <li><a href="{% url 'problems' %}">Problems</a></li>
+            <li><button class="login-container"><a href="{% url 'logout' %}">logout</a></button></li>
+            
+
+
+        </ul>
+    </div>
+
+    <div class="intro">
+      <h1>Code For Life</h1>
+      <p>Your potential, Our passion.</p>
+      <p>Your Vision, Our Future.</p>
+        
+      <button>Learn More</button>
+    </div>
+   
+    <br><br>
+    <h1>WHAT DO WE PROVIDE?</h1>
+    <br><br>
+
+    <div class="flex-container">
+      <div><img src="https://media.istockphoto.com/id/1269039522/vector/friends-is-hugging-icon-friendship-concept-vector-on-isolated-white-background-eps-10.jpg?s=612x612&w=0&k=20&c=OMeYb8kmTNUoTPEoR91RZQwg0MPLo3ZKQZvSbs981as=" width="250" height="250" >
+      <h3> Community </h3></div>
+      <div><img src="https://static.vecteezy.com/system/resources/previews/005/191/909/original/anxiety-glyph-icon-silhouette-symbol-panic-attack-nervous-tension-stress-head-problems-emotional-stress-symptom-negative-space-isolated-illustration-vector.jpg" width="250" height="250">
+      <h3> Problems </h3></div>
+      <div><img src="https://i.pinimg.com/236x/af/21/a9/af21a93bf2bed8ce1239c35a223b8b91.jpg" width="250" height="250">
+      <h3> Solutions </h3></div>
+      <div><img src="https://static.vecteezy.com/system/resources/thumbnails/000/600/565/small/ICON060.jpg" width="250" height="250">
+      <h3> Contests </h3></div>
+  
+    </div>
+    <br><br>
+
+    <div class="about-me">
+      <div class="about-me-text">
+        <br>
+        <h1>ABOUT US</h1>
+        <br>
+        <p>CodeForLife is a social network dedicated to programming enthusiast. </p><p>However, it also provides a forum for frequent problem-solving discussions, </p><p>the development of participants' talents, and contest preparation.</p>
+      </div>
+      <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-99786,resizemode-1,msid-76635850/small-biz/sme-sector/cia-comes-together-over-the-distressed-assets-funds-subordinate-debt-for-msmes-.jpg" alt="me">
+    </div>
+    <br>
+
+
+
+
+
+    <div class="footer"> 
+        <ul>
+            <li><a href="#">Connect</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            
+
+        </ul>
+    </div>
+{% if success_message %}
+    <script>
+    // Display an alert when the page loads
+    window.onload = function() {
+        alert("Document successfully processed!");
+    };
+    </script>
+    {% endif %}
+</body>
+</html>

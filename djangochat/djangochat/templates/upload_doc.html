@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForLife</title>
+    <style>
+*{
+    margin: 0px;
+}
+.mynav{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+    margin-top: 0px;
+    padding: 5px;
+    /* z-index: 1; */
+    width: 100%;
+
+}
+#log_outb
+{
+    float: right;
+    align-items: flex-end;
+}
+#id{
+    height: 30px;
+    margin-top: 0px;
+    margin: -10;
+    width: 100%;
+
+}
+.dropdown-check-list {
+        display: inline-block;
+        position: relative;
+        border: 2px solid orange;
+        padding: 10px;
+        width: 100%;
+        margin-top: 50px;
+
+    }
+.dropdown-check-list .anchor,
+    .type,
+    .price {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px 50px 5px 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.login-container:hover{
+    background-color: rgb(231, 136, 12);
+    color: white;
+
+}
+.login-container{
+    background-color: antiquewhite;
+    border: 1px orange;
+    /*margin-left: 960px;*/
+    /*padding: 12px 15px;*/
+    /*cursor: pointer;*/
+    /*border-color: antiquewhite;*/
+    /*border-radius: 10px*/
+    align-items: end;
+    float: right;
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+
+}
+li a:hover {
+    background-color: rgb(231, 136, 12);
+    color: white;
+}
+li a:active{
+    background-color: rgb(225, 133, 13);
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+
+}
+table, th, td {
+    border: 1px solid rgb(254, 231, 188);
+    border-collapse: collapse;
+
+}
+table{
+    width: 60%;
+    height: 80%;
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+    margin-bottom: 60px;
+}
+.lnk{
+    width: 130px;
+    padding: 5px;
+
+}
+.lnk button{
+    background-color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgb(251, 249, 244);
+}
+th, td, tr {
+    font-size: large;
+}
+tr:hover{
+    background-color: antiquewhite;
+}
+.problem-heading{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: antiquewhite;
+    margin-left: 35%;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.btn-btn-outline-btn-info{
+    color: white;
+    background-color: rgb(237, 204, 144);
+    border:none;
+    border-radius:10px;
+    padding:5px;
+    margin-top:3px;
+    margin-bottom:2px;
+}
+.btn-btn-outline-btn-sub
+{
+    background-color: rgb(255, 218, 148);
+    border-radius: 10px;
+    border-color: brown;
+    padding:10px;
+    margin-top:13px;
+    margin-bottom:2px;
+    cursor: pointer;
+}
+.btn-btn-outline-btn-sub:hover
+{
+    background-color: rgb(255, 218, 148);
+    color: white;
+    border-radius: 10px;
+    border-color: brown;
+    padding:10px;
+    margin-top:13px;
+    margin-bottom:2px;
+    cursor: pointer;
+}
+.sohail{
+    background-color: rgb(255, 218, 148);
+    border-radius: 20px;
+    border-color: brown;
+    margin-top: 30px;
+
+}
+.container-resume-upload{
+    margin-top: 180px;
+    margin-bottom: 100px;
+    margin-left: 450px;
+    border-radius: 20px;
+    padding: 50px;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: large;
+    background-color: rgb(196, 194, 194);
+    box-shadow: gray 4px 4px 0px 0px;
+    /* background-color: rgb(196, 178, 178);     */
+    /* border-style: dashed; */
+    /* border-color: blueviolet; */
+    
+    
+}
+label[for="id_doc_file"]{
+    /* background-color: white; */
+    margin-right: 20px;
+    color: black;
+    width: 60px;
+    text-justify: auto;
+    border: 1px;
+    border-color: blue;
+}
+input[type="file"]{
+    /* background-color: white; */
+    padding: 23px;
+    margin-left: 0px;
+    color: black;
+    
+}
+/* input[type="file"]:hover{
+    background-color: white;
+    padding: 23px;
+    margin-left: 0px;
+    color: blue;
+    
+} */
+
+.resume-upload-button{
+    margin-top: 40px;
+    margin-left: 30%;
+    color: white;
+    align-items: center;
+    padding: 15px;
+    background-color: blue;
+    border-style : dotted;
+    border-color: skyblue;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.img-container{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 15%;
+    align-items: center;
+    width: 70%;
+
+    
+}
+form{
+    /* background-color: cyan; */
+    opacity: 0.8;   
+    padding: 5px;
+}
+body{
+    background-image: url('https://cdn3.iconfinder.com/data/icons/business-people-part-2-1/64/resume-512.png');
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+    background-position : 100px 200px;
+    background-color: rgb(218, 212, 212);
+}
+#question-id{
+    max-width: 30px;
+    
+}
+    </style>
+
+</head>
+<body>
+     <div class = "mynav" id="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'discuss' %}">Discuss</a></li>
+            <li><a href="{% url 'upload_doc' %}">Upload doc</a></li>
+            <li><a href="{% url 'resume' %}">Resume</a></li>
+            <li><a href="{% url 'topics' %}">Topic</a></li>
+            <li><a href="{% url 'problems' %}">Problems</a></li>
+            <li><button class="login-container"><a href="{% url 'logout' %}">logout</a></button></li>
+
+
+        </ul>
+    </div>
+     <div class="img-container">
+        <!-- <h1>Upload a Word Document</h1> -->
+        
+        <div class="wrap-container">
+            <div>
+            </div>
+            <div class="container-resume-upload">
+                <div>
+                    <h5>Recruiting for a Python Develeoper</h5>
+                    <hr>
+                    <h5>Skills Required</h5>
+                    <hr>
+                    <ol style="display: flex;flex-direction: column;width: fit-content;font-size: medium;font-family: Georgia, 'Times New Roman', Times, serif;">
+                        <li >Python</li>
+                        <li>Django</li>
+                    </ol>
+                    <h5>Location : Pune</h5>
+                    <hr>
+
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class = "resume-upload-button" type="submit">Upload</button>
+                </form>
+                
+            </div>
+        </div>
+     </div>
+
+    <div class ="footer">
+        <ul>
+            <li><a href="#">Connect</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+
+
+        </ul>
+    </div>
+</body>
+</html>
+
